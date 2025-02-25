@@ -1,0 +1,20 @@
+<p>ng-style works!</p>
+
+<div class="row p-4">
+    <div class="col-3" [ngStyle]="{'background-color':div1BgColor,'color':'blue'}">
+        Div 1
+    </div>
+    <div class="col-3" [ngStyle]="{'background-color':isChecked?'teal':'blue'}">
+        Div 2
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="addDiv1Color('green')">Green</button>
+        <button class="btn btn-danger" (click)="addDiv1Color('red')">Red</button>
+    </div>
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isChecked" />
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="getAllCars()">Load cars</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Reg No</th>
+                    <th>Daily Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of carList; track $index){
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{item.brand}}</td>
+                        <td>{{item.model}}</td>
+                        <td>{{item.regNo}}</td>
+                        <td>{{item.dailyRate}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <form>
+            <div class="row">
+              <div class="col">
+                <label>Reg No</label>
+                <input type="text" class="form-control" placeholder="Enter car image url">
+              </div>
+              <div class="col">
+                <label>Brand</label>
+                <input type="text" class="form-control" placeholder="Enter brand name">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Model</label>
+                    <input type="text" class="form-control" placeholder="Enter model name">
+                </div>
+                <div class="col">
+                    <label>Year</label>
+                    <input type="text" class="form-control" placeholder="Enter year">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Color</label>
+                    <input type="text" class="form-control" placeholder="Enter color">
+                </div>
+                <div class="col">
+                    <label>Daily Rate</label>
+                    <input type="text" class="form-control" placeholder="Enter daily rate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Car image url</label>
+                    <input type="text" class="form-control" placeholder="Enter car image url">
+                </div>
+              </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-secondary m-2">Reset Form</button>
+            <button class="btn btn-success m-2">Save Car</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<p>data-binding works!</p>
+<button class="btn btn-success" (click)="navigateToAdmin()">Navigate to Admin</button>
+<div>
+    <div>
+        1.interpolation
+        <p>firstName is {{firstName}}</p>
+        <span>{{rollNo}}</span>
+    </div>
+    <div>
+        2.property binding
+        <input type="text" [value]="firstName" id="" />
+    </div>
+    <div>
+        3.event binding
+        <button (click)="showWelcome()">Click me</button>
+    </div>
+</div>
+
+<div>
+    ng model directive
+    <input type="text" [(ngModel)] = 'firstName' />
+</div>
